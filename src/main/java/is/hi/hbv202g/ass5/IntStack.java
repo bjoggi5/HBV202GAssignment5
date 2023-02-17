@@ -72,4 +72,11 @@ public class IntStack {
         return theStack[--nextPushLocation];
     }
 
+    public boolean isEmpty() {
+        if (this.nextPushLocation == 0) {
+            return true;
+        }
+        return false;
+    }
+
 }
