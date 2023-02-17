@@ -55,6 +55,17 @@ public class IntStack {
     // TODO: Add isEmpty() method
 
     /**
+     * Check if stack is empty (i.e. next push location is 0)
+     * @return true if stack is empty, false otherwise
+     */
+    public boolean isEmpty() {
+        if (this.nextPushLocation == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * Push on int on the stack.
      * @param element The int to be pushed on the stack
      * @throws ArrayIndexOutOfBoundsException If the stack was already full
@@ -72,11 +83,6 @@ public class IntStack {
         return theStack[--nextPushLocation];
     }
 
-    public boolean isEmpty() {
-        if (this.nextPushLocation == 0) {
-            return true;
-        }
-        return false;
-    }
+
 
 }
